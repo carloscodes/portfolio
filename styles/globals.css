@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 html, body {
-    background-color: #1A202C;
+    background-color: #1c1c1c;
 }
 
 .dark {
-   background-color: #1A202C;
+   background-color: #1c1c1c;
 }
