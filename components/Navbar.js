@@ -1,7 +1,7 @@
 export default function Navbar() {
     return (
         <>
-            <nav className="flex items-center justify-between flex-wrap bg-blue-800 p-6">
+            <nav className="flex items-center justify-between flex-wrap dark p-6">
                 <div className="flex items-center flex-shrink-0 text-white mr-6">
                     <span className="font-semibold text-xl tracking-tight">NewCo</span>
                 </div>
