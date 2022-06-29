@@ -5,7 +5,7 @@
 /*Unless explicitly overwritten in function compnents, 
 ALL backgrounds are this color and text white
 */
-* {
+*, html, body {
     background-color: #1c1c1c;
     color: #F8F8FF; 
 }
