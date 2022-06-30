@@ -17,7 +17,7 @@ const variantsIcon = {
 
   const variants = {
     open: { opacity: 1, y: 5},
-    closed: { opacity: 1, y: -500},
+    closed: { opacity: 1, y: 1},
     
   }
 
@@ -43,7 +43,7 @@ export default function Navbar() {
             <nav className="flex items-center justify-between flex-wrap p-6">
                 
                 <div className="flex items-center flex-shrink-0 mr-6">
-                    <span className="font-semibold text-xl tracking-tight">NewCo</span>
+                    <span className="font-semibold text-xl tracking-tight">CC</span>
                 </div>
                 <div className='lg:hidden'>
                     <motion.div  animate={isOpen ? "closed" : "open"}
@@ -69,7 +69,7 @@ export default function Navbar() {
                     </a>
                     </div>
                     <div>
-                        <a href="#" className="inline-block mt-4 lg:mt-0 font-light text-sm px-4 py-2 customBtn">Download App</a>
+                        <a href="#" className="inline-block mt-4 lg:mt-0 text-sm px-4 py-2 customBtn">Download App</a>
                     </div>
                 </motion.div>
                 

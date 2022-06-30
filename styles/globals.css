@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300');
+
+html, body, * {
+    font-family: 'Montserrat', sans-serif;
+}
 
 .customBtn {
     @apply leading-none border-transparent rounded text-gray-100 bg-green-600 hover:bg-green-500;
