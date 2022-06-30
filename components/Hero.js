@@ -1,6 +1,6 @@
 import { Container, Heading, Text } from "@chakra-ui/react";
 
-export default function() {
+export default function Hero() {
     return (
         <>
             <Container className="text-left m-16">

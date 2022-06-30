@@ -49,7 +49,7 @@ export default function Navbar() {
                     <motion.div  animate={isOpen ? "closed" : "open"}
                     variants={variantsIcon} transition={{ duration: .5 }} className="block lg:hidden">
                         <button className="flex items-center" onClick={() => toggleMenu()}>
-                        { isOpen ? <Image src={CloseIcon} width={30} height={60} style={svgStyle} />  : <Image src={MenuIcon} width={30} height={60} style={svgStyle} /> }
+                        { isOpen ? <Image alt="close icon" src={CloseIcon} width={30} height={60} style={svgStyle} />  : <Image alt="menu icon" src={MenuIcon} width={30} height={60} style={svgStyle} /> }
                         </button>
                     </motion.div>
                 </div>
