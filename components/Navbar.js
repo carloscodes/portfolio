@@ -1,3 +1,10 @@
+import Image from "next/image";
+import MenuIcon from '../public/menu.svg'
+
+
+const svgStyle = {
+    filter: 'invert(100%) sepia(1%) saturate(7491%) hue-rotate(225deg) brightness(127%) contrast(99%)'
+}
 
 export default function Navbar() {
     function toggleMenu(){
@@ -19,8 +26,8 @@ export default function Navbar() {
                 </div>
                 <div className='lg:hidden'>
                     <div className="block lg:hidden">
-                        <button className="flex items-center px-3 py-2 border rounded" onClick={() => toggleMenu()}>
-                            <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+                        <button className="flex items-center" onClick={() => toggleMenu()}>
+                            <Image src={MenuIcon} width={35} height={65} style={svgStyle} />
                         </button>
                     </div>
                 </div>
