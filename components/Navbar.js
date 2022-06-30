@@ -9,9 +9,16 @@ const svgStyle = {
     filter: 'invert(100%) sepia(1%) saturate(7491%) hue-rotate(225deg) brightness(127%) contrast(99%)'
 }
 
-const variants = {
+const variantsIcon = {
     open: { opacity: 1},
-    closed: { opacity: 1, y: "5%" },
+    closed: { opacity: 1, y: "5%", rotate: 180 },
+    
+  }
+
+  const variants = {
+    open: { opacity: 1, y: 5},
+    closed: { opacity: 1, y: -500},
+    
   }
 
 export default function Navbar() {
@@ -35,12 +42,12 @@ export default function Navbar() {
         <div className='mb-4 mt-2'>
             <nav className="flex items-center justify-between flex-wrap p-6">
                 
-                <motion.div className="flex items-center flex-shrink-0 mr-6">
+                <div className="flex items-center flex-shrink-0 mr-6">
                     <span className="font-semibold text-xl tracking-tight">NewCo</span>
-                </motion.div>
+                </div>
                 <div className='lg:hidden'>
-                    <motion.div animate={isOpen ? "closed" : "open"}
-                    variants={variants} className="block lg:hidden">
+                    <motion.div  animate={isOpen ? "closed" : "open"}
+                    variants={variantsIcon} transition={{ duration: .5 }} className="block lg:hidden">
                         <button className="flex items-center" onClick={() => toggleMenu()}>
                         { isOpen ? <Image src={CloseIcon} width={30} height={60} style={svgStyle} />  : <Image src={MenuIcon} width={30} height={60} style={svgStyle} /> }
                         </button>
@@ -49,7 +56,7 @@ export default function Navbar() {
                 
 
                 <motion.div animate={isOpen ? "open" : "closed"}
-                    variants={variants} className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden" id="mobile-menu">
+                    variants={variants} transition={{ type: 'tween', duration: .5 }}  className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden" id="mobile-menu">
                     <div className="text-sm lg:flex-grow">
                     <a href="#" className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 hover:border-b">
                         Home
