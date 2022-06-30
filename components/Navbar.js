@@ -32,7 +32,7 @@ export default function Navbar() {
     }
 
     return (
-        <div className='mb-4 mt-4'>
+        <div className='mb-4 mt-2'>
             <nav className="flex items-center justify-between flex-wrap p-6">
                 
                 <motion.div className="flex items-center flex-shrink-0 mr-6">
