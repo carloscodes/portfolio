@@ -1,8 +1,8 @@
-import { CloseIcon } from "@chakra-ui/icons";
 import Image from "next/image";
 import { useState } from "react";
 import MenuIcon from '../public/menu.svg'
 import { motion } from "framer-motion";
+import CloseIcon from '../public/close.svg'
 
 
 const svgStyle = {
@@ -10,8 +10,8 @@ const svgStyle = {
 }
 
 const variants = {
-    open: { opacity: 1, x: 0 },
-    closed: { opacity: 0, y: "-50%" },
+    open: { opacity: 1},
+    closed: { opacity: 1, y: "5%" },
   }
 
 export default function Navbar() {
@@ -32,18 +32,21 @@ export default function Navbar() {
     }
 
     return (
-        <div className='mb-4'>
+        <div className='mb-4 mt-4'>
             <nav className="flex items-center justify-between flex-wrap p-6">
-                <div className="flex items-center flex-shrink-0 mr-6">
+                
+                <motion.div className="flex items-center flex-shrink-0 mr-6">
                     <span className="font-semibold text-xl tracking-tight">NewCo</span>
-                </div>
+                </motion.div>
                 <div className='lg:hidden'>
-                    <div className="block lg:hidden">
+                    <motion.div animate={isOpen ? "closed" : "open"}
+                    variants={variants} className="block lg:hidden">
                         <button className="flex items-center" onClick={() => toggleMenu()}>
-                           { isOpen ? <CloseIcon /> : <Image src={MenuIcon} width={30} height={60} style={svgStyle} /> }
+                        { isOpen ? <Image src={CloseIcon} width={30} height={60} style={svgStyle} />  : <Image src={MenuIcon} width={30} height={60} style={svgStyle} /> }
                         </button>
-                    </div>
+                    </motion.div>
                 </div>
+                
 
                 <motion.div animate={isOpen ? "open" : "closed"}
                     variants={variants} className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden" id="mobile-menu">
@@ -59,7 +62,7 @@ export default function Navbar() {
                     </a>
                     </div>
                     <div>
-                        <a href="#" className="inline-block mt-4 lg:mt-0 font-light text-sm px-4 py-2  customBtn">Download App</a>
+                        <a href="#" className="inline-block mt-4 lg:mt-0 font-light text-sm px-4 py-2 customBtn">Download App</a>
                     </div>
                 </motion.div>
                 
