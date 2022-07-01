@@ -3,6 +3,7 @@ import { useState } from "react";
 import MenuIcon from '../public/menu.svg'
 import { motion } from "framer-motion";
 import CloseIcon from '../public/close.svg'
+import Link from "next/link";
 
 
 const svgStyle = {
@@ -43,7 +44,7 @@ export default function Navbar() {
             <nav className="flex items-center justify-between flex-wrap p-6">
                 
                 <div className="flex items-center flex-shrink-0 mr-6">
-                    <span className="font-semibold text-xl tracking-tight">CC</span>
+                    <a className="font-semibold text-xl tracking-tight hover:cursor-pointer">CC</a>
                 </div>
                 <div className='lg:hidden'>
                     <motion.div  animate={isOpen ? "closed" : "open"}
@@ -58,18 +59,23 @@ export default function Navbar() {
                 <motion.div animate={isOpen ? "open" : "closed"}
                     variants={variants} transition={{ type: 'tween', duration: .5 }}  className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden" id="mobile-menu">
                     <div className="text-sm lg:flex-grow">
-                    <a href="#" className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 hover:border-b">
+                    <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 hover:border-b hover:cursor-pointer">
                         Home
                     </a>
-                    <a href="#" className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 hover:border-b">
+                    <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 hover:border-b hover:cursor-pointer">
+                        Work
+                    </a>
+                    <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 hover:border-b hover:cursor-pointer">
                         Shop
                     </a>
-                    <a href="#" className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 hover:border-b">
+                    <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 hover:border-b hover:cursor-pointer">
                         Blog
                     </a>
                     </div>
                     <div>
-                        <a href="#" className="inline-block mt-4 lg:mt-0 text-sm px-4 py-2 customBtn">Download App</a>
+                        <Link href='https://apps.apple.com/us/app/training-log/id1621350376'>
+                            <a className="inline-block mt-4 lg:mt-0 text-sm px-4 py-2 customBtn hover:cursor-pointer">Download App</a>
+                        </Link>
                     </div>
                 </motion.div>
                 
