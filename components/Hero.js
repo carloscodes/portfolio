@@ -1,5 +1,6 @@
 import { Container, Heading, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 
 
@@ -32,9 +33,11 @@ export default function Hero() {
                     <motion.div animate={{ y: 10 }}
                 transition={{ type: 'spring', duration: 1, delay: 1 }}>
                     <Text fontSize='xs' className="text-gray-400 mb-12">I&apos;m a software engineer specializing in building (and occasionally design) exceptional digital experiences. Currently, I&apos;m focused on building an accessible, human-centered product to get people healthy and thriving. </Text>
-                    <button className="bg-transparent text-green-400 font-light text-xs py-2 px-4 border border-green-400 hover:bg-gray-900 rounded">
-                        Check out my work!
-                    </button>
+                    <Link href='/work'>
+                        <button className="bg-transparent text-green-400 font-light text-xs py-2 px-4 border border-green-400 hover:bg-gray-900 rounded">
+                            Check out my work!
+                        </button>
+                    </Link>
                 </motion.div>
                 
             </Container>

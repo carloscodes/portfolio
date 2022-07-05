@@ -44,7 +44,9 @@ export default function Navbar() {
             <nav className="flex items-center justify-between flex-wrap p-6">
                 
                 <div className="flex items-center flex-shrink-0 mr-6">
-                    <a className="font-semibold text-xl tracking-tight hover:cursor-pointer">CC</a>
+                    <Link href='/'>
+                        <a className="font-semibold text-xl tracking-tight hover:cursor-pointer">CC</a>
+                    </Link>
                 </div>
                 <div className='lg:hidden'>
                     <motion.div  animate={isOpen ? "closed" : "open"}
@@ -59,18 +61,26 @@ export default function Navbar() {
                 <motion.div animate={isOpen ? "open" : "closed"}
                     variants={variants} transition={{ type: 'tween', duration: .5 }}  className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden" id="mobile-menu">
                     <div className="text-sm lg:flex-grow">
-                    <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 hover:border-b hover:cursor-pointer">
-                        Home
-                    </a>
-                    <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 hover:border-b hover:cursor-pointer">
-                        Work
-                    </a>
-                    <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 hover:border-b hover:cursor-pointer">
-                        Shop
-                    </a>
-                    <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 hover:border-b hover:cursor-pointer">
-                        Blog
-                    </a>
+                    <Link href='/'>
+                        <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 hover:border-b hover:cursor-pointer">
+                            Home
+                        </a>
+                    </Link>
+                    <Link href='/work'>
+                        <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 hover:border-b hover:cursor-pointer">
+                            Work
+                        </a>
+                    </Link>
+                    <Link href='/shop'>
+                        <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 hover:border-b hover:cursor-pointer">
+                            Shop
+                        </a>
+                    </Link>
+                    <Link href='/blog'>
+                        <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 hover:border-b hover:cursor-pointer">
+                            Blog
+                        </a>
+                    </Link>
                     </div>
                     <div>
                         <Link href='https://apps.apple.com/us/app/training-log/id1621350376'>
