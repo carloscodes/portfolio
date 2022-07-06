@@ -1,7 +1,7 @@
-import Header from '../components/Header'
-import Navbar from '../components/Navbar'
-import Hero from '../components/Hero'
-import Footer from '../components/Footer'
+import Header from '../components/global/Header'
+import Navbar from '../components/global/Navbar'
+import Hero from '../components/home/Hero'
+import Footer from '../components/global/Footer'
 
 export default function Home() {
   return (

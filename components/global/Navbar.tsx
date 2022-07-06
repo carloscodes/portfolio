@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { useState } from "react";
-import MenuIcon from '../public/menu.svg'
+import MenuIcon from '../../public/menu.svg'
 import { motion } from "framer-motion";
-import CloseIcon from '../public/close.svg'
+import CloseIcon from '../../public/close.svg'
 import Link from "next/link";
 
 
@@ -28,13 +28,13 @@ export default function Navbar() {
     function toggleMenu(){
         let m = document.getElementById('mobile-menu')
 
-        if(m.classList.contains('hidden')){
+        if(m!.classList.contains('hidden')){
             setIsOpen(true)
-            m.classList.remove('hidden')
+            m!.classList.remove('hidden')
             
         } else {
             setIsOpen(false)
-            m.classList.add('hidden')
+            m!.classList.add('hidden')
         }
         
     }
@@ -61,9 +61,9 @@ export default function Navbar() {
                 <motion.div animate={isOpen ? "open" : "closed"}
                     variants={variants} transition={{ type: 'tween', duration: .5 }}  className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden" id="mobile-menu">
                     <div className="text-sm lg:flex-grow">
-                    <Link href='/'>
+                    <Link href='/about'>
                         <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 hover:border-b hover:cursor-pointer">
-                            Home
+                            About
                         </a>
                     </Link>
                     <Link href='/work'>
