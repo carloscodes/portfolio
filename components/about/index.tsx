@@ -21,7 +21,7 @@ export default function About() {
                     </Text>
                     <br></br>
                     <Text className="text-gray-400 text-sm">
-                        Here are a few technologies I've been working with as of late:
+                        Here are a few technologies I&apos;ve been working with as of late:
                         <br></br>
                         <br></br>
                         <div className="grid gap-2 grid-cols-2 text-sm font-semibold">
