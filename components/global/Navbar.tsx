@@ -1,4 +1,5 @@
 import { HamburgerIcon, SmallCloseIcon } from '@chakra-ui/icons'
+import { CloseButton } from '@chakra-ui/react';
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -50,7 +51,7 @@ export default function Navbar() {
                     <motion.div  animate={isOpen ? "closed" : "open"}
                     variants={variantsIcon} transition={{ duration: .5 }} className="block lg:hidden">
                         <button className="flex items-center" onClick={() => toggleMenu()}>
-                        { isOpen ? <SmallCloseIcon /> : <HamburgerIcon /> }
+                        { isOpen ? <CloseButton /> : <HamburgerIcon /> }
                         </button>
                     </motion.div>
                 </div>
