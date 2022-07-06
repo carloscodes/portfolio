@@ -9,7 +9,7 @@ export default function Hero() {
         <>
             <Container className="text-left m-16 pb-14">
                 <div>
-                    <Text size='xs' noOfLines={1} className="text-green-400 mb-4">
+                    <Text size='xs' noOfLines={1} className="text-green-500 mb-4">
                         Hi, my name is
                     </Text>
                 </div>
@@ -29,7 +29,7 @@ export default function Hero() {
                     <div>
                     <Text fontSize='xs' className="text-gray-400 mb-12">I&apos;m a software engineer specializing in building (and occasionally design) exceptional digital experiences. Currently, I&apos;m focused on building an accessible, human-centered product to get people healthy and thriving. </Text>
                     <Link href='/work'>
-                        <button className="bg-transparent text-green-400 font-light text-xs py-2 px-4 border border-green-400 hover:bg-gray-900 rounded">
+                        <button className="bg-transparent text-green-500 font-medium text-xs py-2 px-4 border border-green-500 hover:bg-gray-900 rounded">
                             Check out my work!
                         </button>
                     </Link>

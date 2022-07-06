@@ -24,7 +24,7 @@ export default function About() {
                         Here are a few technologies I&apos;ve been working with as of late:
                         <br></br>
                         <br></br>
-                        <div className="grid gap-2 grid-cols-2 text-sm font-semibold">
+                        <div className="grid gap-2 grid-cols-2 text-sm font-semibold text-green-500">
                             <Text>JavaScript ES6+</Text>
                             <Text>React</Text>
                             <Text>Flutter/Dart</Text>
