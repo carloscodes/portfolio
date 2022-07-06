@@ -14,7 +14,7 @@ export default function Shop() {
                         Product Name
                     </Text>
                     <div className="pb-4">
-                        <Select focusBorderColor="green.500" borderColor="gray.900" color="GrayText" variant='outline' placeholder='Size'>
+                        <Select focusBorderColor="gray.700" borderColor="gray.900" color="gray.200" variant='outline' placeholder='Size'>
                             <option value="xl">X Large</option>
                             <option value="large">Large</option>
                             <option value="medium">Medium</option>
@@ -22,7 +22,7 @@ export default function Shop() {
                         </Select>
                     </div>
                     <div className="flex justify-center">
-                        <Button colorScheme='gray' color='green.400' variant='outline'>
+                        <Button color='green.400' variant='outline'>
                             Buy Now
                         </Button>
                     </div>
