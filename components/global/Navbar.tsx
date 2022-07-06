@@ -50,9 +50,9 @@ export default function Navbar() {
                 <div className='lg:hidden'>
                     <motion.div  animate={isOpen ? "closed" : "open"}
                     variants={variantsIcon} transition={{ duration: .5 }} className="block lg:hidden">
-                        <button className="flex items-center" onClick={() => toggleMenu()}>
-                        { isOpen ? <CloseButton /> : <HamburgerIcon /> }
-                        </button>
+                        {isOpen ? <CloseButton onClick={() => toggleMenu()} /> : <button className="flex items-center" onClick={() => toggleMenu()}>
+                             <HamburgerIcon />
+                        </button> }
                     </motion.div>
                 </div>
                 
