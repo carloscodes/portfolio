@@ -1,11 +1,12 @@
 import Navbar from '../../components/global/Navbar'
 import Footer from '../../components/global/Footer'
+import Shop from '../../components/shop';
 
 export default function ShopPage() {
     return (
         <>
         <Navbar />
-        <h1>Shop</h1>
+            <Shop />
         <Footer />
         </>
     );
