@@ -35,6 +35,7 @@ export default function Blog({ posts }: any) {
 
 function BlogCard(posts: any){
     const [isLoading, setLoading ] = useState(true);
+    console.log(posts);
 
     return (
         <Link href="/blogpost">
