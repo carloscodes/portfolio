@@ -17,7 +17,7 @@ export default function BlogPage({posts}: any) {
     return (
         <>
         <Navbar />
-            {posts.map((post: any) => <Blog post={post}/>)}
+            {posts.map((post: any) => <Blog key={post.id} post={post}/>)}
         <Footer />
         </>
     );
