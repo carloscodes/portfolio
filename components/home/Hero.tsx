@@ -27,7 +27,7 @@ export default function Hero() {
                 </div>
                     
                     <div>
-                    <Text fontSize='xs' className="text-gray-400 mb-12">I&apos;m a software engineer specializing in building (and occasionally design) exceptional digital experiences. Currently, I&apos;m focused on building an accessible, human-centered product to get people healthy and thriving. </Text>
+                    <Text fontSize='sm' className="text-gray-400 mb-12">I&apos;m a software engineer specializing in building (and occasionally design) exceptional digital experiences. Currently, I&apos;m focused on building an accessible, human-centered product to get people healthy and thriving. </Text>
                     <Link href='/work'>
                         <button className="bg-transparent text-green-500 font-medium text-xs py-2 px-4 border border-green-500 hover:bg-gray-900 rounded">
                             Check out my work!
