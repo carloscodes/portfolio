@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['media.healthyfood.com']
+    domains: ['media.healthyfood.com', 'cdnb.artstation.com']
   }
 }
 
