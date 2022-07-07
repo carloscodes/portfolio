@@ -1,12 +1,23 @@
 import Navbar from '../../components/global/Navbar'
 import Footer from '../../components/global/Footer'
 import Blog from '../../components/blog';
+import supabase from '../../utils/supabase';
 
-export default function BlogPage() {
+export async function getStaticProps(){
+    const { data: posts, error } = await supabase.from('posts').select('*');
+
+    return {
+        props: {
+            posts,
+        },
+    }
+}
+
+export default function BlogPage({posts}: any) {
     return (
         <>
         <Navbar />
-            <Blog />
+            {posts.map((post: any) => <Blog post={post}/>)}
         <Footer />
         </>
     );

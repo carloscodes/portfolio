@@ -11,13 +11,14 @@ export default function About() {
                     <Text className="text-gray-400 text-md">
                         Hello world! My name is Carlos Chavarria and I enjoy making software. 
                         My interest in software development started back in 2016 when I took a java programming 
-                        class in college. Shortly after I was intrigued and decided to pursue CS at the University of California Irvine.
-                        To my surprise, a lot of the coursework was theoretical, I took it upon myself to learn web and app development when I
+                        class in college. I was intrigued and decided to pursue CS at the University of California Irvine.
+                        I took it upon myself to learn web and app development when I
                         was not studying and managed to run a relatively successful software consulting business for a couple years after college.
+                        I built web apps, stripe backends with paypal and zapier integrations, as well as a fully fledged iOS app with in-app payment support.
                         <br></br>
                         <br></br>
-                        My main focus these days is learning and a continous refinement of my skills. I also spend a lot of time teaching my daughter
-                        about software on my spare time.
+                        My main focus these days is learning and a continous refinement of my skills. I am also teaching my daughter
+                        about software and business in my spare time. I run her small business for her 😊
                     </Text>
                     <br></br>
                     <Text className="text-gray-400 text-sm">
