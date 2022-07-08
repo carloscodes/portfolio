@@ -17,7 +17,7 @@ export default function PostPage() {
 
     return (
         <>
-            {session ? <Login /> : <Post />}
+            {!session ? <Login /> : <Post />}
         </>
     );
 }
