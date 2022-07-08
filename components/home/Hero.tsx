@@ -12,13 +12,13 @@ export default function Hero() {
                         <Text size='sm' noOfLines={1} className="text-gray-300 mb-4">
                             Hi, my name is
                         </Text>
-                        <Heading as='h1' size='2xl' noOfLines={1} className="mb-3"> 
+                        <Heading as='h1' size='2xl' noOfLines={1}> 
                             Carlos Chavarria.
                         </Heading>
                     </div>
                 
                     <div>
-                        <Heading as='h2' size='lg' noOfLines={2} className="leading-relaxed text-gray-400 mb-4">
+                        <Heading as='h2' size='lg' noOfLines={2} className="leading-relaxed text-gray-400 mb-2">
                             I build software for the web and mobile
                         </Heading> 
                     </div>
