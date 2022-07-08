@@ -14,7 +14,7 @@ export default function Shop() {
     return (
         <>
             <Container>
-                <div className="group block p-8 bg-black hover:cursor-pointer shadow-md border border-slate-600 rounded-lg max-w-sm">
+                <div className="group block p-8 hover:cursor-pointer shadow-md border border-slate-300 rounded-lg max-w-sm">
                     <div className="pb-8">
                         <Image className={
                             blur("group-hover:opacity-80 duration-700 ease-in-out", isLoading ? "grayscale blur-2xl scale-110" : "grayscale-0 blur-0 scale-100")

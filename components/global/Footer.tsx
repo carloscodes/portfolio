@@ -3,14 +3,14 @@ import Link from "next/link";
 export default function Footer() {
     return (
         <>
-        <footer className="text-center lg:text-left text-gray-600">
+        <footer className="text-center lg:text-left text-slate-300">
             <div className="flex justify-center items-center lg:justify-between p-6 border-b border-gray-600">
                 <div className="mr-12 hidden lg:block">
                 <span>Get connected with me on social networks:</span>
                 </div>
                 <div className="flex justify-center">
                 <Link href='https://twitter.com/carnivoredev'>
-                    <a className="mr-6 text-gray-600">
+                    <a className="mr-6 ">
                         <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter"
                         className="w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path fill="currentColor"
@@ -20,7 +20,7 @@ export default function Footer() {
                     </a>
                 </Link>
                 <Link href='https://www.instagram.com/sol.wave'>
-                    <a className="mr-6 text-gray-600">
+                    <a className="mr-6">
                         <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram"
                         className="w-3.5" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                         <path fill="currentColor"
@@ -30,7 +30,7 @@ export default function Footer() {
                     </a>
                 </Link>
                 <Link href='https://github.com/carloscodes'>
-                    <a className="text-gray-600">
+                    <a>
                         <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github"
                         className="w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
                         <path fill="currentColor"
@@ -43,7 +43,7 @@ export default function Footer() {
             </div>
             <div className="text-center p-6">
                 <span>© 2022 Copyright: </span>
-                <span className="text-gray-600 font-semibold">Carlos Chavarria</span>
+                <span className="font-semibold">Carlos Chavarria</span>
             </div>
         </footer>
         </>

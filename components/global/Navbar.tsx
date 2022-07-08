@@ -1,4 +1,4 @@
-import { HamburgerIcon, SmallCloseIcon } from '@chakra-ui/icons'
+import { HamburgerIcon, SmallCloseIcon } from '@chakra-ui/icons';
 import { CloseButton } from '@chakra-ui/react';
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -39,7 +39,7 @@ export default function Navbar() {
     }
 
     return (
-        <div className='mb-4 mt-2'>
+        <div className='mb-4 mt-2 text-slate-50'>
             <nav className="flex items-center justify-between flex-wrap p-6">
                 
                 <div className="flex items-center flex-shrink-0 mr-6">
