@@ -1,4 +1,4 @@
-import { Container, Heading, Text } from "@chakra-ui/react";
+import { Container, Heading, Text, Avatar } from "@chakra-ui/react";
 import Link from "next/link";
 
 
@@ -8,11 +8,16 @@ export default function Hero() {
     return (
         <>
             <Container className="grid grid-cols-1 gap-4 text-left m-16 pb-14">                    
-                    <div>
-                        <Text size='sm' noOfLines={1} className="text-gray-300 mb-4">
-                            Hi, my name is
-                        </Text>
-                        <Heading as='h1' size='2xl' noOfLines={1}> 
+                    <div className="md:flex justify-evenly">
+                    <Avatar 
+                        className="mb-4"
+                        bg='blue.500'
+                        size='xl'
+                        name='Carlos Chavarria'
+                        src="images/me.png"
+                        />
+
+                        <Heading className="mt-6" as='h1' size='xl' noOfLines={1}> 
                             Carlos Chavarria.
                         </Heading>
                     </div>
