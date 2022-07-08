@@ -12,7 +12,7 @@ function blur(...classes: String[]) {
 export default function Blog({ post }: any) {
     return (
         <>
-            <Container>
+            <Container className="mb-6">
                 <BlogCard post={post} />
             </Container>
         </>

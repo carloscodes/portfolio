@@ -26,7 +26,7 @@ export default function LoginPage() {
         <Navbar />
         <Container>
             <div className="group block p-8 bg-black hover:cursor-pointer shadow-md border border-slate-600 rounded-lg max-w-sm">
-              <Input focusBorderColor="gray" colorScheme="gray" color="gray.600" id='email' placeholder='Email' onChange={event => setEmail(event.currentTarget.value)} />
+              <Input focusBorderColor="gray" colorScheme="gray" color="gray.300" id='email' placeholder='Email' onChange={event => setEmail(event.currentTarget.value)} />
               <div className="pt-4 flex justify-center">
                 <Button className="shadow-lg shadow-green-500/25" color='green.400' variant='outline' onClick={() => handleLogin()}>Login</Button>
               </div>
