@@ -1,5 +1,5 @@
 import { HamburgerIcon, SmallCloseIcon } from '@chakra-ui/icons';
-import { CloseButton } from '@chakra-ui/react';
+import { Button, CloseButton, Divider } from '@chakra-ui/react';
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -57,32 +57,39 @@ export default function Navbar() {
                     <Link href='/'>
                         <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 hover:border-b hover:cursor-pointer">
                             Home
+                            {isOpen ? <div className='mt-4'><Divider /></div> : <div> </div>}
                         </a>
+                        
                     </Link>
+                    
                     <Link href='/about'>
                         <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 hover:border-b hover:cursor-pointer">
                             About
+                            {isOpen ? <div className='mt-4'><Divider /></div> : <div> </div>}
                         </a>
                     </Link>
                     <Link href='/work'>
                         <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 hover:border-b hover:cursor-pointer">
                             Work
+                            {isOpen ? <div className='mt-4'><Divider /></div> : <div> </div>}
                         </a>
                     </Link>
                     <Link href='/shop'>
                         <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 hover:border-b hover:cursor-pointer">
                             Shop
+                            {isOpen ? <div className='mt-4'><Divider /></div> : <div> </div>}
                         </a>
                     </Link>
                     <Link href='/blog'>
-                        <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 hover:border-b hover:cursor-pointer">
+                        <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 hover:border-b hover:cursor-pointer">
                             Blog
+                            {isOpen ? <div className='mt-4'><Divider /></div> : <div> </div>}
                         </a>
                     </Link>
                     </div>
-                    <div>
+                    <div className='mt-4'>
                         <Link href='https://apps.apple.com/us/app/training-log/id1621350376'>
-                            <a className="inline-block mt-4 lg:mt-0 text-sm px-4 py-2 customBtn hover:cursor-pointer">Download App</a>
+                            <Button fontWeight="hairline" size="sm" variant="outline" color="blue.500" >Download App</Button>
                         </Link>
                     </div>
                 </motion.div>
