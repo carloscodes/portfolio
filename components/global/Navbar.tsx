@@ -39,14 +39,8 @@ export default function Navbar() {
     }
 
     return (
-        <div className='mb-4 mt-2 text-slate-50'>
+        <div className='mb-4 mt-2 text-slate-50 lg:px-12'>
             <nav className="flex items-center justify-between flex-wrap p-6">
-                
-                <div className="flex items-center flex-shrink-0 mr-6">
-                    <Link href='/'>
-                        <a className="font-semibold text-xl tracking-tight hover:cursor-pointer">CC</a>
-                    </Link>
-                </div>
                 <div className='lg:hidden'>
                     <motion.div  animate={isOpen ? "closed" : "open"}
                     variants={variantsIcon} transition={{ duration: .5 }} className="block lg:hidden">
@@ -60,6 +54,11 @@ export default function Navbar() {
                 <motion.div animate={isOpen ? "open" : "closed"}
                     variants={variants} transition={{ type: 'tween', duration: .5 }}  className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden" id="mobile-menu">
                     <div className="text-sm lg:flex-grow">
+                    <Link href='/'>
+                        <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 hover:border-b hover:cursor-pointer">
+                            Home
+                        </a>
+                    </Link>
                     <Link href='/about'>
                         <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 hover:border-b hover:cursor-pointer">
                             About

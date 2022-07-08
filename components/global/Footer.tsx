@@ -1,14 +1,15 @@
 import Link from "next/link";
+import { Text } from "@chakra-ui/react";
 
 export default function Footer() {
     return (
         <>
-        <footer className="text-center lg:text-left text-slate-300">
+        <footer className="text-center lg:text-left text-slate-300 lg:px-12">
             <div className="flex justify-center items-center lg:justify-between p-6 border-b border-gray-600">
                 <div className="mr-12 hidden lg:block">
-                <span>Get connected with me on social networks:</span>
+                <Text className="text-gray-600" fontSize="sm">Get connected</Text>
                 </div>
-                <div className="flex justify-center">
+                <div className="grid grid-cols-3 gap-8">
                 <Link href='https://twitter.com/carnivoredev'>
                     <a className="mr-6 ">
                         <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter"
@@ -42,8 +43,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className="text-center p-6">
-                <span>© 2022 Copyright: </span>
-                <span className="font-semibold">Carlos Chavarria</span>
+                <Text fontSize="sm" className="font-medium">© 2022 Copyright: Carlos Chavarria</Text>
             </div>
         </footer>
         </>

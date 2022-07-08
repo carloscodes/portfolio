@@ -8,7 +8,7 @@ export default function About() {
                     <Heading as='h3' size='lg' className="pb-8 text-gray-300">
                         About Me
                     </Heading>
-                    <Text className="text-gray-400 text-md">
+                    <Text className="leading-loose text-gray-400 text-md">
                         Hello world! My name is Carlos Chavarria and I enjoy making software. 
                         My interest in software development started back in 2016 when I took a java programming 
                         class in college. I was intrigued and decided to pursue CS at the University of California Irvine.
@@ -25,7 +25,7 @@ export default function About() {
                         Here are a few technologies I&apos;ve been working with as of late:
                         <br></br>
                         <br></br>
-                        <div className="grid gap-2 grid-cols-2 text-sm font-semibold text-green-500">
+                        <div className="leading-loose grid gap-2 grid-cols-2 text-sm font-semibold text-blue-400">
                             <Text>JavaScript ES6+</Text>
                             <Text>React</Text>
                             <Text>Flutter/Dart</Text>

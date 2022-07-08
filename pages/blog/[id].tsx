@@ -21,7 +21,7 @@ export default function Post({ post }: any) {
                     <div className="text-center pb-16">
                         <Text className="pb-4" fontSize="xs">{post.date}</Text>
                         <Heading className="pb-12">{post.title}</Heading>
-                        <Text>{post.content} </Text>
+                        <pre>{post.content} </pre>
                     </div>
                 </Container>
             <Footer />

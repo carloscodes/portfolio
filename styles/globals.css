@@ -9,5 +9,5 @@ html, body, * {
 }
 
 .customBtn {
-    @apply leading-none border-transparent rounded text-gray-100 bg-green-600 hover:bg-green-500;
+    @apply leading-none border-transparent rounded bg-gradient-to-r from-cyan-500 to-blue-500 ;
 }

@@ -7,33 +7,32 @@ export default function Hero() {
 
     return (
         <>
-            <Container className="text-left m-16 pb-14">
-                <div>
-                    <Text size='xs' noOfLines={1} className="text-green-500 mb-4">
-                        Hi, my name is
-                    </Text>
-                </div>
-                    
+            <Container className="grid grid-cols-1 gap-4 text-left m-16 pb-14">                    
                     <div>
-                    <Heading as='h1' size='2xl' noOfLines={1} className="mb-3"> 
-                        Carlos Chavarria.
-                    </Heading>
-                </div>
+                        <Text size='sm' noOfLines={1} className="text-slate-50 mb-4">
+                            Hi, my name is
+                        </Text>
+                        <Heading as='h1' size='2xl' noOfLines={1} className="mb-3"> 
+                            Carlos Chavarria.
+                        </Heading>
+                    </div>
                 
                     <div>
-                    <Heading as='h1' size='xl' noOfLines={2} className="text-gray-400 mb-4">
-                        I build software for the web and iOS
-                    </Heading> 
-                </div>
+                        <Heading as='h2' size='lg' noOfLines={2} className="leading-loose text-gray-400 mb-4">
+                            I build software for the web and mobile
+                        </Heading> 
+                    </div>
                     
                     <div>
-                    <Text fontSize='sm' className="text-gray-400 mb-12">I&apos;m a software engineer specializing in building (and occasionally design) exceptional digital experiences. Currently, I&apos;m focused on building an accessible, human-centered product to get people healthy and thriving. </Text>
-                    <Link href='/work'>
-                        <button className="bg-transparent text-green-500 font-medium text-xs py-2 px-4 border border-green-500 hover:bg-gray-900 rounded">
-                            Check out my work!
-                        </button>
-                    </Link>
-                </div>
+                        <Text fontSize='sm' className="leading-loose text-gray-400 mb-12">I&apos;m a software engineer specializing in building (and occasionally design) exceptional digital experiences. Currently, I&apos;m focused on building an accessible, human-centered product to get people healthy and thriving. </Text>
+                        <div className="flex justify-end">
+                            <Link href='/work'>
+                                <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-sm py-2 px-4 rounded">
+                                    Check out my work!
+                                </button>
+                            </Link>
+                        </div>
+                    </div>
                 
             </Container>
         </>
