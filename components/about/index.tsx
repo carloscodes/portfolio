@@ -8,6 +8,7 @@ export default function About() {
                     <Heading as='h3' size='lg' className="pb-8 text-gray-300">
                         About Me
                     </Heading>
+
                     <Text className="leading-loose text-gray-400 text-md">
                         Hello world! My name is Carlos Chavarria and I enjoy making software. 
                         My interest in software development started back in 2016 when I took a java programming 

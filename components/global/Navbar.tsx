@@ -3,6 +3,7 @@ import { Button, CloseButton, Divider } from '@chakra-ui/react';
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Contact from '../contact/Contact';
 
 
 const svgStyle = {
@@ -55,7 +56,7 @@ export default function Navbar() {
                     variants={variants} transition={{ type: 'tween', duration: .5 }}  className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden" id="mobile-menu">
                     <div className="text-sm lg:flex-grow">
                     <Link href='/'>
-                        <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:border-b hover:cursor-pointer">
+                        <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
                             Home
                             {isOpen ? <div className='mt-4'><Divider /></div> : <div> </div>}
                         </a>
@@ -63,23 +64,29 @@ export default function Navbar() {
                     </Link>
                     
                     <Link href='/about'>
-                        <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:border-b hover:cursor-pointer">
+                        <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
                             About
                             {isOpen ? <div className='mt-4'><Divider /></div> : <div> </div>}
                         </a>
                     </Link>
                     <Link href='/work'>
-                        <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:border-b hover:cursor-pointer">
+                        <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
                             Work
                             {isOpen ? <div className='mt-4'><Divider /></div> : <div> </div>}
                         </a>
                     </Link>
                     <Link href='/blog'>
-                        <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:border-b hover:cursor-pointer">
+                        <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
                             Blog
                             {isOpen ? <div className='mt-4'><Divider /></div> : <div> </div>}
                         </a>
                     </Link>
+
+                    <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
+                        <Contact />
+                        {isOpen ? <div className='mt-4'><Divider /></div> : <div> </div>}
+                    </a>
+                    
                     </div>
                     <div className='mt-4'>
                         <Link href='https://apps.apple.com/us/app/training-log/id1621350376'>

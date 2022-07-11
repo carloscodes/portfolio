@@ -25,6 +25,21 @@ const theme = extendTheme({
         colorScheme: 'transparent'
       }
     },
+    Modal: {
+      baseStyle: () => ({
+        dialog: {
+          maxWidth: ["50%", "50%", "50%"],
+          bg: "#111111"
+        }
+      })
+    },
+    Drawer: {
+      baseStyle: () => ({
+        dialog: {
+          bg: "#111111"
+        }
+      })
+    }
   },
 })
 
