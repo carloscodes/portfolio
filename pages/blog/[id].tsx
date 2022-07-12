@@ -1,5 +1,6 @@
 import { Container, Heading, Text  } from "@chakra-ui/react";
 import Footer from "../../components/global/Footer";
+import Header from "../../components/global/Header";
 import Navbar from "../../components/global/Navbar";
 import supabase from "../../utils/supabase";
 
@@ -16,6 +17,7 @@ export async function getServerSideProps({ params }: any){
 export default function Post({ post }: any) {
     return (
         <>
+            <Header />
             <Navbar />
                 <Container>
                     <div className="text-center pb-16">
