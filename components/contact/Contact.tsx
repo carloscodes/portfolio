@@ -1,5 +1,6 @@
 import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Button, useDisclosure, InputGroup, Input, Textarea, useToast} from "@chakra-ui/react";
 import { useState } from "react";
+import supabase from "../../utils/supabase";
 
 export default function Contact() {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -7,6 +8,32 @@ export default function Contact() {
     const [email, setEmail] = useState('')
     const [content, setContent] = useState('')
     const toast = useToast()
+
+    async function submitToDB(){
+        const { data, error } = await supabase
+        .from('contacts')
+        .insert([
+        { name: name, email: email, content: content },
+        ]);
+
+        if(error){
+            throw new Error(error.message);
+        }
+
+        onClose();
+
+        setName('');
+        setEmail('');
+        setContent('');
+
+        return toast({
+            title: 'Your Contact has been successfully sent. Please allow a couple of days for a response',
+            variant: 'solid',
+            isClosable: true,
+            status: 'success'
+            
+          })
+    }
 
     // open chakra modal and submit to db
     function handleContact() {
@@ -19,16 +46,7 @@ export default function Contact() {
               })
         }
 
-        onClose();
-
-        return toast({
-            title: 'Your Contact has been successfully sent. Please allow a couple days for a response',
-            variant: 'solid',
-            isClosable: true,
-            status: 'success'
-            
-          })
-        
+        submitToDB();
     }
 
     return (
@@ -43,6 +61,7 @@ export default function Contact() {
                 isOpen={isOpen}
                 motionPreset='slideInBottom'
                 closeOnOverlayClick={false}
+                autoFocus={false}
             >
                 <ModalOverlay 
                 bg='none'
@@ -51,7 +70,7 @@ export default function Contact() {
                 backdropBlur='4px' />
                 <ModalContent>
                 <ModalHeader>Enter Details</ModalHeader>
-                <ModalCloseButton />
+                <ModalCloseButton/>
                 <ModalBody>
                 <InputGroup className="mb-4">
                     <Input type='text' placeholder='Name' value={name} onChange={(event) => setName(event.target.value)} />
