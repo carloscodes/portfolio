@@ -39,7 +39,7 @@ export default function Contact() {
     async function sendEmail(values: Object){
         let config = {
             method: 'post',
-            url: 'http://localhost:3000/api/contact',
+            url: 'https://carloschavarria.vercel.app/api/contact',
             headers: {
                 'Content-Type': 'application/json'
             },
