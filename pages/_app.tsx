@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import { ChakraProvider } from '@chakra-ui/react'
 import { AppProps } from 'next/app'
 import { ThemeProvider } from 'next-themes'
+import { AnimatePresence } from 'framer-motion'
 // 1. Import `extendTheme`
 import { extendTheme } from "@chakra-ui/react"
 
@@ -47,7 +48,9 @@ function MyApp({ Component, pageProps }: AppProps ) {
   return (
     <ThemeProvider>
       <ChakraProvider theme={theme}>
-        <Component {...pageProps} />
+        <AnimatePresence exitBeforeEnter>
+          <Component {...pageProps} />
+        </AnimatePresence>
       </ChakraProvider>
     </ThemeProvider>
   )

@@ -3,6 +3,7 @@ import Navbar from '../components/global/Navbar'
 import Hero from '../components/home/Hero'
 import Footer from '../components/global/Footer'
 import { Container } from '@chakra-ui/react'
+import { motion } from 'framer-motion'
 
 export default function Home() {
   return (
@@ -10,7 +11,9 @@ export default function Home() {
       <Header />
       <Navbar />
       <Container>
-        <Hero />
+        <motion.div exit={{opacity: 0}} initial={{opacity: 0}} animate={{opacity: 1}}>
+          <Hero />
+        </motion.div>
       </Container>
       <Footer />
     </>
