@@ -1,6 +1,7 @@
 import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Button, useDisclosure, InputGroup, Input, Textarea, useToast} from "@chakra-ui/react";
 import { useState } from "react";
 import supabase from "../../utils/supabase";
+import axios from "axios";
 
 export default function Contact() {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -10,29 +11,62 @@ export default function Contact() {
     const toast = useToast()
 
     async function submitToDB(){
+        const values = {
+            name: name,
+            email: email,
+            content: content
+        }
+
         const { data, error } = await supabase
         .from('contacts')
         .insert([
-        { name: name, email: email, content: content },
+            values,
         ]);
 
         if(error){
             throw new Error(error.message);
         }
 
+        sendEmail(values);
+
         onClose();
 
         setName('');
         setEmail('');
         setContent('');
+    }
 
-        return toast({
-            title: 'Your Contact has been successfully sent. Please allow a couple of days for a response',
-            variant: 'solid',
-            isClosable: true,
-            status: 'success'
+    async function sendEmail(values: Object){
+        let config = {
+            method: 'post',
+            url: 'http://localhost:3000/api/contact',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data: values
+        };
+
+        try {
+            const response = await axios(config);
+
             
-          })
+            return toast({
+                title: 'Your Contact has been successfully sent. Please allow a couple of days for a response',
+                variant: 'solid',
+                isClosable: true,
+                status: 'success'
+                });
+            
+        } catch (error) {
+            return toast({
+                title: `${error}\nPlease try again later.`,
+                variant: 'solid',
+                isClosable: true,
+                status: 'error'
+                
+              });
+        }
+
     }
 
     // open chakra modal and submit to db
