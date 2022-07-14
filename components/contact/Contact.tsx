@@ -39,7 +39,7 @@ export default function Contact() {
     async function sendEmail(values: Object){
         let config = {
             method: 'post',
-            url: 'https://carloschavarria.dev/api/contact',
+            url: `${window.location.origin}/api/contact`,
             headers: {
                 'Content-Type': 'application/json'
             },
