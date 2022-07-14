@@ -6,6 +6,10 @@ export default function handler(req, res) {
 
   const transporter = nodemailer.createTransport({
     name: "carloschavarria.dev",
+    secure: "false",
+    tls: {
+      rejectUnauthorized: false,
+    },
     host: "smtp.gmail.com",
     port: 587,
     auth: {
