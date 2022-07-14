@@ -9,7 +9,7 @@ export default function handler(req, res) {
     tls: {
       rejectUnauthorized: false,
     },
-    host: "smtp.gmail.com",
+    host: "carloschavarria.dev",
     port: 465,
     auth: {
       user: 'chavarriahome17@gmail.com',
