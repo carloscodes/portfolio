@@ -5,8 +5,9 @@ export default function handler(req, res) {
   const {name, email, content } = req.body;
 
   const transporter = nodemailer.createTransport({
+    name: "carloschavarria.dev",
     host: "smtp.gmail.com",
-    port: 465,
+    port: 587,
     auth: {
       user: 'chavarriahome17@gmail.com',
       pass: 'hwfxsziryvwlvirk'
