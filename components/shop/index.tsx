@@ -1,6 +1,7 @@
 import { Container, Text, Select, Button } from "@chakra-ui/react";
 import Image from "next/image";
 import { useState } from "react";
+import { checkout } from "../../utils/checkout";
 
 function blur(...classes: String[]) {
     // https://michaeluloth.com/filter-boolean
@@ -31,7 +32,12 @@ export default function Shop() {
                     </Text>
                     
                     <div className="flex justify-center">
-                        <Button className="shadow-lg shadow-blue-500/25" color='blue.500' variant='outline'>
+                        <Button onClick={() => checkout({
+                            lineItem: [{
+                                price: 'price_1LLRW5CvuzWZZBtlfRn6ZMzr',
+                                quantity: 1
+                            }]
+                        })} className="shadow-lg shadow-blue-500/25" color='blue.500' variant='outline'>
                             Buy Now
                         </Button>
                     </div>

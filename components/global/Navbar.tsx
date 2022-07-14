@@ -81,6 +81,7 @@ export default function Navbar() {
                             {isOpen ? <div className='mt-4'><Divider /></div> : <div> </div>}
                         </a>
                     </Link>
+                    
 
                     <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
                         <Contact />
