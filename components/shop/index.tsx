@@ -31,6 +31,7 @@ export default function Shop() {
                         $29.99
                     </Text>
                     
+                    
                     <div className="flex justify-center">
                         <Button onClick={() => checkout({
                             lineItem: [{
