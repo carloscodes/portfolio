@@ -49,6 +49,8 @@ export default function Contact() {
         try {
             const response = await axios(config);
 
+            console.log(response);
+
             
             return toast({
                 title: 'Your Contact has been successfully sent. Please allow a couple of days for a response',
