@@ -4,11 +4,12 @@ import nodemailer from 'nodemailer';
 export default function handler(req, res) {
   const {name, email, content } = req.body;
 
-  const transporter = nodemailer.createTransport("SMTP",{
+  const transporter = nodemailer.createTransport({
     service: "gmail",
     tls: {
       rejectUnauthorized: false,
     },
+    host: "smtp.gmail.com",
     port: 465,
     auth: {
       user: 'chavarriahome17@gmail.com',
