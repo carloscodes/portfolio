@@ -9,7 +9,7 @@ export default function handler(req, res) {
     port: 465,
     auth: {
       user: 'chavarriahome17@gmail.com',
-      pass: 'zuhslnrivgivbxmz'
+      pass: 'hwfxsziryvwlvirk'
     }
   });
   
