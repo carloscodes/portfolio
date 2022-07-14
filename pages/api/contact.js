@@ -6,7 +6,7 @@ export default function handler(req, res) {
 
   const transporter = nodemailer.createTransport({
     name: "carloschavarria.dev",
-    secure: "false",
+    secure: "true",
     tls: {
       rejectUnauthorized: false,
     },
