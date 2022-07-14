@@ -5,13 +5,12 @@ export default function handler(req, res) {
   const {name, email, content } = req.body;
 
   const transporter = nodemailer.createTransport({
-    name: "carloschavarria.dev",
-    secure: "true",
+    service: "gmail",
     tls: {
       rejectUnauthorized: false,
     },
     host: "smtp.gmail.com",
-    port: 587,
+    port: 465,
     auth: {
       user: 'chavarriahome17@gmail.com',
       pass: 'hwfxsziryvwlvirk'
