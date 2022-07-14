@@ -28,9 +28,11 @@ export default async function handler(req, res) {
         if (err) {
             console.error(err);
             reject(err);  
+            return;
         } else {
             console.log(info);
             resolve(info);
+            return;
         }
     });
   }); 
