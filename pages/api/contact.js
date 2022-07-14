@@ -6,15 +6,13 @@ export default function handler(req, res) {
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
-    tls: {
-      rejectUnauthorized: false,
-    },
     host: "smtp.gmail.com",
-    port: 465,
+    secure: "false",
     auth: {
       user: 'chavarriahome17@gmail.com',
       pass: 'hwfxsziryvwlvirk'
-    }
+    },
+    
   });
   
   var mailOptions = {
@@ -24,13 +22,9 @@ export default function handler(req, res) {
     text: `Name: ${name}\nEmail: ${email}\n\nMessage: ${content}`
   };
   
-  transporter.sendMail(mailOptions, function(error, info){
-    if (error) {
-      console.log(error);
-    } else {
-      console.log('Email sent: ' + info.response);
-    }
-  });
+  const response = transporter.sendMail(mailOptions);
+
+  console.log(response);
 
   res.status(200).json(req.body)
 }
