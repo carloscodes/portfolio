@@ -18,8 +18,8 @@ export async function checkout( {lineItem}: any ){
     await stripe!.redirectToCheckout({
         mode: 'payment',
         lineItems: lineItem,
-        successUrl: 'https://carloschavarria.vercel.app/shop/success',
-        cancelUrl: 'https://carloschavarria.vercel.app/shop',
+        successUrl: 'https://carloschavarria.dev/shop/success',
+        cancelUrl: 'https://carloschavarria.dev/shop',
     })
 }
 

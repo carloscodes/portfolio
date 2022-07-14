@@ -6,13 +6,11 @@ export default function handler(req, res) {
 
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
-    secure: true,
     port: 465,
     auth: {
       user: 'chavarriahome17@gmail.com',
       pass: 'zuhslnrivgivbxmz'
-    },
-    ssl: true
+    }
   });
   
   var mailOptions = {
