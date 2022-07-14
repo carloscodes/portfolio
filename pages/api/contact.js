@@ -12,7 +12,7 @@ export default function handler(req, res) {
       user: 'chavarriahome17@gmail.com',
       pass: 'zuhslnrivgivbxmz'
     },
-    ssl: false
+    ssl: true
   });
   
   var mailOptions = {
