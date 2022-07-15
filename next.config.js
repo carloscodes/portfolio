@@ -1,9 +1,20 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  images: {
-    domains: ['media.healthyfood.com', 'cdnb.artstation.com', 'ozcxfgsvtlcbxasohewy.supabase.co']
-  },
-}
+// https://nextjs.org/docs/advanced-features/using-mdx
 
-module.exports = nextConfig
+  const withMDX = require('@next/mdx')({
+    extension: /\.mdx?$/,
+    options: {
+      remarkPlugins: [],
+      rehypePlugins: [],
+      // If you use `MDXProvider`, uncomment the following line.
+      // providerImportSource: "@mdx-js/react",
+    },
+  })
+  module.exports = withMDX({
+    reactStrictMode: true,
+    images: {
+      domains: ['media.healthyfood.com', 'cdnb.artstation.com', 'ozcxfgsvtlcbxasohewy.supabase.co']
+    },
+    // Append the default value with md extensions
+    pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+  })
