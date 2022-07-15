@@ -18,8 +18,7 @@ export default function About() {
                         I built web apps, stripe backends with paypal and zapier integrations, as well as a fully fledged iOS app with in-app payment support.
                         <br></br>
                         <br></br>
-                        My main focus these days is learning and a continous refinement of my skills. I am also teaching my daughter
-                        about software and business in my spare time. I run her small business for her 😊
+                        My main focus these days is learning and a continous refinement of my skills.
                     </Text>
                     <br></br>
                     <Text className="text-gray-400 text-sm">
