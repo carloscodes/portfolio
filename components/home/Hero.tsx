@@ -1,5 +1,6 @@
 import { Container, Heading, Text, Avatar } from "@chakra-ui/react";
 import Link from "next/link";
+import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 
 
@@ -29,7 +30,7 @@ export default function Hero() {
                     </div>
                     
                     <div>
-                        <Text fontSize='sm' className="leading-loose text-gray-400 mb-14">I&apos;m a full stack software engineer specializing in building (and occasionally design) exceptional digital experiences. Currently, I&apos;m focused on building an accessible, human-centered product to get people healthy and thriving using React Native and Supabase. More to follow. </Text>
+                        <Text fontSize='sm' className="leading-loose text-gray-400 mb-14">I&apos;m a <RoughNotation animationDelay={500} animationDuration={700} type="underline" show={true} color="#3b82f6">full stack </RoughNotation> software engineer specializing in building (and occasionally design) exceptional digital experiences. Currently, I&apos;m focused on building an accessible, human-centered product to get people healthy and thriving using React Native and Supabase. More to follow. </Text>
                         <div className="flex justify-center">
                             <Link href='/work'>
                                 <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-sm py-2 px-4 rounded">
