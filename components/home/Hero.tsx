@@ -1,6 +1,6 @@
 import { Container, Heading, Text, Avatar } from "@chakra-ui/react";
 import Link from "next/link";
-import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
+import { RoughNotation } from "react-rough-notation";
 
 
 
