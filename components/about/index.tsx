@@ -21,7 +21,7 @@ export default function About() {
                         My main focus these days is learning and a continous refinement of my skills.
                     </Text>
                     <br></br>
-                    <Text className="text-gray-400 text-sm">
+                    <div className="text-gray-400 text-sm">
                         Here are a few technologies I&apos;ve been working with as of late:
                         <br></br>
                         <br></br>
@@ -35,7 +35,7 @@ export default function About() {
                             <Text>Supabase</Text>
                             <Text>React Native</Text>
                         </div>
-                    </Text>
+                    </div>
                 </div>
             </Container>
         </div>
