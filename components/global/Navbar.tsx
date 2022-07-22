@@ -60,7 +60,6 @@ export default function Navbar() {
                         <Link href='/'>
                             <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
                                 Home
-                                {isOpen ? <div className='mt-4'><Divider /></div> : <div> </div>}
                             </a>
                             
                         </Link>
@@ -68,26 +67,22 @@ export default function Navbar() {
                         <Link href='/about'>
                             <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
                                 About
-                                {isOpen ? <div className='mt-4'><Divider /></div> : <div> </div>}
                             </a>
                         </Link>
                         <Link href='/work'>
                             <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
                                 Work
-                                {isOpen ? <div className='mt-4'><Divider /></div> : <div> </div>}
                             </a>
                         </Link>
                         <Link href='/blog'>
                             <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
                                 Blog
-                                {isOpen ? <div className='mt-4'><Divider /></div> : <div> </div>}
                             </a>
                         </Link>
                         
 
                         <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
                             <Contact />
-                            {isOpen ? <div className='mt-4'><Divider /></div> : <div> </div>}
                         </a>
                         </div>
                         <div className='mt-4 hidden lg:block'>
@@ -109,7 +104,7 @@ export default function Navbar() {
                         <Link href='/'>
                             <a onClick={toggleMenu} className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
                                 Home
-                                {isOpen ? <div className='mt-4'><Divider /></div> : <div> </div>}
+                                <div className='mt-4'><Divider /></div>
                             </a>
                             
                         </Link>
@@ -117,26 +112,26 @@ export default function Navbar() {
                         <Link href='/about'>
                             <a onClick={toggleMenu} className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
                                 About
-                                {isOpen ? <div className='mt-4'><Divider /></div> : <div> </div>}
+                                <div className='mt-4'><Divider /></div>
                             </a>
                         </Link>
                         <Link href='/work'>
                             <a onClick={toggleMenu} className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
                                 Work
-                                {isOpen ? <div className='mt-4'><Divider /></div> : <div> </div>}
+                                <div className='mt-4'><Divider /></div>
                             </a>
                         </Link>
                         <Link href='/blog'>
                             <a onClick={toggleMenu} className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
                                 Blog
-                                {isOpen ? <div className='mt-4'><Divider /></div> : <div> </div>}
+                                <div className='mt-4'><Divider /></div>
                             </a>
                         </Link>
                         
 
                         <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
                             <Contact />
-                            {isOpen ? <div className='mt-4'><Divider /></div> : <div> </div>}
+                            <div className='mt-4'><Divider /></div>
                         </a>
                         
                         </div>
