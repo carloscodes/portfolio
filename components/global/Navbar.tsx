@@ -107,7 +107,7 @@ export default function Navbar() {
                         <DrawerBody>
                         <div className="text-sm lg:flex-grow">
                         <Link href='/'>
-                            <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
+                            <a onClick={toggleMenu} className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
                                 Home
                                 {isOpen ? <div className='mt-4'><Divider /></div> : <div> </div>}
                             </a>
@@ -115,19 +115,19 @@ export default function Navbar() {
                         </Link>
                         
                         <Link href='/about'>
-                            <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
+                            <a onClick={toggleMenu} className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
                                 About
                                 {isOpen ? <div className='mt-4'><Divider /></div> : <div> </div>}
                             </a>
                         </Link>
                         <Link href='/work'>
-                            <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
+                            <a onClick={toggleMenu} className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
                                 Work
                                 {isOpen ? <div className='mt-4'><Divider /></div> : <div> </div>}
                             </a>
                         </Link>
                         <Link href='/blog'>
-                            <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
+                            <a onClick={toggleMenu} className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
                                 Blog
                                 {isOpen ? <div className='mt-4'><Divider /></div> : <div> </div>}
                             </a>
