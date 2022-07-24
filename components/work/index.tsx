@@ -18,6 +18,18 @@ export default function Work() {
                 <Container>
                     <div className="group">
                         <Heading as='h3' size='lg'>
+                            Next.js + Supabase + TailwindCSS Company Website
+                        </Heading>
+                        <Link href="https://goldenrambuzz.com">
+                            <a>
+                                <Image className={blur("group-hover:opacity-80 duration-700 ease-in-out", isLoading ? "grayscale blur-2xl scale-110" : "grayscale-0 blur-0 scale-100")} alt="" src="/images/goldenram.png" width="100%" height="100%" layout="responsive" objectFit="contain"
+                                onLoadingComplete={() => setLoading(false)}
+                                />
+                            </a>
+                        </Link>
+                    </div>
+                    <div className="group">
+                        <Heading as='h3' size='lg'>
                             Angular Calculator PWA
                         </Heading>
                         <Link href="https://chalkcalculator.web.app">
