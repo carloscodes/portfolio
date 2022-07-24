@@ -3,7 +3,6 @@ import { Button, CloseButton, Divider, Drawer, DrawerOverlay, DrawerContent, Dra
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Contact from '../contact/Contact';
 
 
 const svgStyle = {
@@ -81,9 +80,11 @@ export default function Navbar() {
                         </Link>
                         
 
-                        <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
-                            <Contact />
-                        </a>
+                        <Link href='/contact'>
+                            <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
+                                Contact
+                            </a>
+                        </Link>
                         </div>
                         <div className='mt-4 hidden lg:block'>
                             <Link href='https://apps.apple.com/us/app/training-log/id1621350376'>
@@ -129,10 +130,12 @@ export default function Navbar() {
                         </Link>
                         
 
-                        <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
-                            <Contact />
-                            <div className='mt-4'><Divider /></div>
-                        </a>
+                        <Link href='/contact'>
+                            <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
+                                Contact
+                                <div className='mt-4'><Divider /></div>
+                            </a>
+                        </Link>
                         
                         </div>
                         <div className='mt-4'>

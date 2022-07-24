@@ -1,14 +1,17 @@
-import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Button, useDisclosure, InputGroup, Input, Textarea, useToast} from "@chakra-ui/react";
+import { Button, Container, Heading, Input, InputGroup, Spinner, Textarea, useToast } from "@chakra-ui/react";
 import { useState } from "react";
 import supabase from "../../utils/supabase";
 import axios from "axios";
+import Header from "../../components/global/Header";
+import Navbar from "../../components/global/Navbar";
+import Footer from "../../components/global/Footer";
 
-export default function Contact() {
-    const { isOpen, onOpen, onClose } = useDisclosure()
+export default function ContactPage() {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [content, setContent] = useState('')
     const toast = useToast()
+    const [loading, setLoading] = useState(false)
 
     async function submitToDB(){
         const values = {
@@ -29,8 +32,6 @@ export default function Contact() {
 
         sendEmail(values);
 
-        onClose();
-
         setName('');
         setEmail('');
         setContent('');
@@ -47,19 +48,33 @@ export default function Contact() {
         };
 
         try {
+            setLoading(true);
+
             const response = await axios(config);
 
             console.log(response);
 
             
-            return toast({
+            toast({
                 title: 'Your Contact has been successfully sent. Please allow a couple of days for a response',
                 variant: 'solid',
                 isClosable: true,
                 status: 'success'
                 });
+
+                // hide loading indicator
+            setTimeout(() => {
+                setLoading(false);
+            }
+            , 2000);
             
         } catch (error) {
+            // hide loading indicator
+            setTimeout(() => {
+                setLoading(false);
+            }
+            , 2000);
+
             return toast({
                 title: `${error}\nPlease try again later.`,
                 variant: 'solid',
@@ -86,28 +101,13 @@ export default function Contact() {
     }
 
     return (
-        <>
-            <div onClick={onOpen}>
-                Contact
-            </div>
-            <Modal
-                size="xl"
-                isCentered
-                onClose={onClose}
-                isOpen={isOpen}
-                motionPreset='slideInBottom'
-                closeOnOverlayClick={false}
-                autoFocus={false}
-            >
-                <ModalOverlay 
-                bg='none'
-                backdropFilter='auto'
-                backdropInvert='4%'
-                backdropBlur='4px' />
-                <ModalContent>
-                <ModalHeader>Enter Details</ModalHeader>
-                <ModalCloseButton/>
-                <ModalBody>
+        !loading ? <>
+            <Header />
+            <Navbar />
+            <Container className="grid place-items-center">
+                <Heading className="mb-8">
+                    Get in touch
+                </Heading>
                 <InputGroup className="mb-4">
                     <Input type='text' placeholder='Name' value={name} onChange={(event) => setName(event.target.value)} />
                 </InputGroup>
@@ -117,12 +117,22 @@ export default function Contact() {
                 <InputGroup>
                     <Textarea placeholder='Hello, I am reaching out because...' value={content} onChange={(event) => setContent(event.target.value)} />
                 </InputGroup>
-                </ModalBody>
-                <ModalFooter>
-                    <Button variant='outline' onClick={handleContact} >Send</Button>
-                </ModalFooter>
-                </ModalContent>
-            </Modal>
-        </>
+                <Button className="mt-8" variant='outline' onClick={handleContact} >Send</Button>
+            </Container>
+            <Footer />
+        </> : <div>
+            <Header />
+            <Navbar />
+                <div className="grid place-items-center">
+                <Spinner
+                        thickness='4px'
+                        speed='0.65s'
+                        emptyColor='gray.200'
+                        color='blue.500'
+                        size='xl'
+                        />
+                </div>
+                <Footer />
+        </div>
     );
 }
