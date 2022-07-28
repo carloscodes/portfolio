@@ -9,7 +9,7 @@ export default function About() {
                         About Me
                     </Heading>
 
-                    <Text className="leading-loose text-gray-400 text-md">
+                    <Text className="leading-loose text-slate-200 text-md">
                         Hello world! My name is Carlos Chavarria and I enjoy making software. 
                         My interest in software development started back in 2016 when I took a java programming 
                         class in college. I was intrigued and decided to pursue CS at the University of California Irvine.
@@ -21,7 +21,7 @@ export default function About() {
                         My main focus these days is learning and a continous refinement of my skills.
                     </Text>
                     <br></br>
-                    <div className="text-gray-400 text-sm">
+                    <div className="text-slate-300 text-sm">
                         Here are a few technologies I&apos;ve been working with as of late:
                         <br></br>
                         <br></br>

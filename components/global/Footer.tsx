@@ -8,7 +8,7 @@ export default function Footer() {
         <footer className="text-center lg:text-left text-slate-300 lg:px-12">
             <div className="flex justify-center items-center lg:justify-between p-6 border-b border-gray-600">
                 <div className="mr-12 hidden lg:block">
-                <Text className="text-gray-600" fontSize="sm">Get connected</Text>
+                <Text className="text-slate-200" fontSize="sm">Get connected</Text>
                 </div>
                 <div className="grid grid-cols-4 gap-8">
                 <Link href='mailto:chavarriacarlos18@gmail.com'>
