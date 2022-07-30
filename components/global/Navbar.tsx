@@ -50,38 +50,38 @@ export default function Navbar() {
                     <motion.div  animate={isNavOpen ? "closed" : "open"}
                     variants={variantsIcon} transition={{ duration: .5 }} className="block lg:hidden">
                         {isNavOpen ? <CloseButton onClick={() => toggleMenu()} /> : <button className="flex items-center" onClick={() => toggleMenu()}>
-                             <HamburgerIcon />
+                             <HamburgerIcon fontSize="xl" />
                         </button> }
                     </motion.div>
                 </div>
 
                 <div className="text-sm lg:flex-grow hidden lg:block">
                         <Link href='/'>
-                            <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
+                            <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:cursor-pointer rounded-md">
                                 Home
                             </a>
                             
                         </Link>
                         
                         <Link href='/about'>
-                            <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
+                            <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:cursor-pointer rounded-md">
                                 About
                             </a>
                         </Link>
                         <Link href='/work'>
-                            <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
+                            <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:cursor-pointer rounded-md">
                                 Work
                             </a>
                         </Link>
                         <Link href='/blog'>
-                            <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
+                            <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:cursor-pointer rounded-md">
                                 Blog
                             </a>
                         </Link>
                         
 
                         <Link href='/contact'>
-                            <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
+                            <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:cursor-pointer rounded-md">
                                 Contact
                             </a>
                         </Link>
@@ -101,9 +101,9 @@ export default function Navbar() {
                         <DrawerCloseButton />
                         <DrawerHeader></DrawerHeader>
                         <DrawerBody>
-                        <div className="text-sm lg:flex-grow">
+                        <div className="text-sm lg:flex-grow mb-12">
                         <Link href='/'>
-                            <a onClick={toggleMenu} className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
+                            <a onClick={toggleMenu} className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:cursor-pointer rounded-md">
                                 Home
                                 <div className='mt-4'><Divider /></div>
                             </a>
@@ -111,19 +111,19 @@ export default function Navbar() {
                         </Link>
                         
                         <Link href='/about'>
-                            <a onClick={toggleMenu} className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
+                            <a onClick={toggleMenu} className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:cursor-pointer rounded-md">
                                 About
                                 <div className='mt-4'><Divider /></div>
                             </a>
                         </Link>
                         <Link href='/work'>
-                            <a onClick={toggleMenu} className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
+                            <a onClick={toggleMenu} className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:cursor-pointer rounded-md">
                                 Work
                                 <div className='mt-4'><Divider /></div>
                             </a>
                         </Link>
                         <Link href='/blog'>
-                            <a onClick={toggleMenu} className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
+                            <a onClick={toggleMenu} className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:cursor-pointer rounded-md">
                                 Blog
                                 <div className='mt-4'><Divider /></div>
                             </a>
@@ -131,9 +131,8 @@ export default function Navbar() {
                         
 
                         <Link href='/contact'>
-                            <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gray-900 hover:cursor-pointer rounded-md">
+                            <a className="px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:cursor-pointer rounded-md">
                                 Contact
-                                <div className='mt-4'><Divider /></div>
                             </a>
                         </Link>
                         
