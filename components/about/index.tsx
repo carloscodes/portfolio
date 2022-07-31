@@ -12,7 +12,7 @@ export default function About() {
                     <Text className="leading-loose text-slate-200 text-md">
                         Hello world! My name is Carlos Chavarria and I enjoy making software. 
                         My interest in software development started back in 2016 when I took a java programming 
-                        class in college. I was intrigued and decided to pursue CS at the University of California Irvine.
+                        class in college. I was intrigued, I worked hard at it and got admitted into the University of California Irvine where I decided to pursue Computer Science.
                         I took it upon myself to learn web and app development when I
                         was not studying and managed to run a relatively successful software consulting business for a couple years after college.
                         I built web apps, stripe backends with paypal and zapier integrations, as well as a fully fledged iOS app with in-app payment support.
@@ -21,7 +21,7 @@ export default function About() {
                         My main focus these days is learning and a continous refinement of my skills.
                     </Text>
                     <br></br>
-                    <div className="text-slate-300 text-sm">
+                    <div className="text-slate-300">
                         Here are a few technologies I&apos;ve been working with as of late:
                         <br></br>
                         <br></br>

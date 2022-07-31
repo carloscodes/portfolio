@@ -20,7 +20,7 @@ export default function BlogPage({posts}: any) {
         <>
             <Header />
             <Navbar />
-                <motion.div exit={{opacity: 0}} initial={{opacity: 0}} animate={{opacity: 1}}>
+                <motion.div className='grid lg:grid-cols-2 grid-cols-1' exit={{opacity: 0}} initial={{opacity: 0}} animate={{opacity: 1}}>
                     {posts.map((post: any) => <Blog key={post.id} post={post}/>)}
                 </motion.div>
             <Footer />

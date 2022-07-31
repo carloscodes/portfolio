@@ -15,7 +15,7 @@ export default function Work() {
     return (
         <>
             <div className="pb-8">
-                <Container>
+                <Container className="text-center">
                     <div className="group">
                         <Heading as='h3' size='lg'>
                             Next.js + Supabase + TailwindCSS Company Website
@@ -42,7 +42,7 @@ export default function Work() {
                     </div>
                     <div className="group">
                         <Heading as='h3' size='lg'>
-                            Flutter Training App
+                            Flutter + Firebase Training App
                         </Heading>
                         <Link href="https://apps.apple.com/us/app/training-log/id1621350376">
                             <a>
