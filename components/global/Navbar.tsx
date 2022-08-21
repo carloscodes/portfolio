@@ -157,17 +157,6 @@ export default function Navbar() {
                       </div>
                     </a>
                   </Link>
-                  <Link href='/blog'>
-                    <a
-                      onClick={toggleMenu}
-                      className='px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:cursor-pointer rounded-md'
-                    >
-                      Blog
-                      <div className='mt-4'>
-                        <Divider />
-                      </div>
-                    </a>
-                  </Link>
 
                   <Link href='/contact'>
                     <a className='px-2 py-2 block mt-4 lg:inline-block lg:mt-0 mr-4 md:hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:cursor-pointer rounded-md'>
