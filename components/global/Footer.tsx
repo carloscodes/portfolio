@@ -18,7 +18,7 @@ export default function Footer() {
                 <EmailIcon className='w-4 mb-8' />
               </a>
             </Link>
-            <Link href='https://twitter.com/espressophilo'>
+            <Link href='https://twitter.com/espressoaloha'>
               <a className='mr-6 '>
                 <svg
                   aria-hidden='true'
