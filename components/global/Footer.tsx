@@ -10,7 +10,7 @@ export default function Footer() {
           <div className='mr-12 hidden lg:block'>
             <Text fontSize='sm'>Get connected</Text>
           </div>
-          <div className='grid grid-cols-4 gap-8'>
+          <div className='grid grid-cols-3 gap-8'>
             <Link href='mailto:chavarriacarlos18@gmail.com'>
               <a className='mr-6 '>
                 <EmailIcon className='w-4 mb-8' />
