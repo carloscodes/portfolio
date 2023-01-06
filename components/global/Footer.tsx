@@ -5,12 +5,10 @@ import { EmailIcon } from '@chakra-ui/icons';
 export default function Footer() {
   return (
     <>
-      <footer className='text-center lg:text-left text-slate-300 lg:px-12'>
+      <footer className='text-center lg:text-left text-gray-500 lg:px-12'>
         <div className='flex justify-center items-center lg:justify-between p-6 border-b border-gray-600'>
           <div className='mr-12 hidden lg:block'>
-            <Text className='text-slate-200' fontSize='sm'>
-              Get connected
-            </Text>
+            <Text fontSize='sm'>Get connected</Text>
           </div>
           <div className='grid grid-cols-4 gap-8'>
             <Link href='mailto:chavarriacarlos18@gmail.com'>
@@ -58,9 +56,10 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <div className='text-center p-6'>
-          <Text fontSize='sm' className='font-medium'>
-            © 2022 Copyright: Carlos Chavarria
+        <div className='text-center p-8'>
+          <Text fontSize='sm' className='font-light'>
+            © 2023 Copyright<span className='font-extralight'>:</span> Carlos
+            Chavarria
           </Text>
         </div>
       </footer>
