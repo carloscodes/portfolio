@@ -1,8 +1,11 @@
 import Link from 'next/link';
 import { Text } from '@chakra-ui/react';
 import { EmailIcon } from '@chakra-ui/icons';
+import { useEffect } from 'react';
 
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
     <>
       <footer className='text-center lg:text-left text-gray-500 lg:px-12'>
@@ -58,7 +61,7 @@ export default function Footer() {
         </div>
         <div className='text-center p-8'>
           <Text fontSize='sm' className='font-light'>
-            © 2023 Copyright<span className='font-extralight'>:</span> Carlos
+            © {year} Copyright<span className='font-extralight'>:</span> Carlos
             Chavarria
           </Text>
         </div>
